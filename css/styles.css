@@ -3,6 +3,9 @@
     margin: 0px;
     box-sizing: border-box;
 }
+body{
+    overflow-x: hidden;
+}
 marquee{
     font-size: 40px;
 }
@@ -208,6 +211,7 @@ div.intro{
             position: relative;
             font-size: 1rem;
             color: #fff;
+            line-height: 1.5;
         }
 
         /* Blog Post Section */
@@ -325,8 +329,8 @@ div.optimization,
 div.development,
 div.cars,
 div.media{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border: 2px solid #e5e7eb;
     transform: rotate(45deg);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
@@ -712,22 +716,46 @@ div.bars{
 
 
 /* meda query */
-@media only screen and (max-width: 620px){
+@media only screen and (max-width: 420px){
     nav.navbar{
         display: none;
     }
     div.bars{
         display: block;
     }
-    div.container-2{
-        display: grid;
-        grid-template-rows: repeat(1, 1fr);
-        grid-template-columns: repeat(1, 1fr);
-        height: auto;
-        margin-bottom: 20px;
+    .fa-solid, .fas{
+        font-size: 30px;
+        padding-top: 10px;
+    }
+    .fa-solid, .fas{
+        /* padding: 0px 20px 17px 0px; */
+    }
+    div.intro-text{
+        margin-left: 0px;
+    }
+    .header p{
+        line-height: 1.5;
+    }
+    div.container-2, .holder, .holder-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    div.container-2 > div.holder > div.deadline,
+    div.container-2 > div.holder > div.quality,
+    div.container-2 > div.holder-2 > div.communication,
+    div.container-2 >div.holder-2 > div.pixel{
+        width: 80%;
+    }
+    .communication > h2{
+        text-align: center;
     }
     section.experience{
         margin-top: 20px;
+    }
+    div.skills-pt2{
+        margin-left: 0px;
     }
     div.post{
         display: block;
@@ -740,11 +768,26 @@ div.bars{
         padding: 20px 0px 10px 0px;
     }
     div.pro-sol{
-        display: block;
-        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+    div.service-con{
+        margin: 0px 10px;
     }
     div.web-design{
         display: block;
+        height: auto;
+        margin: 10px;
+    }
+    .pro-img-2 > img:hover {
+        width: 100%;
+        height: auto;
+        margin: 10px;
+    }
+    .pro-img-1 > img:hover{
+        width: 100%;
         height: auto;
     }
     div.web-text >p{
@@ -774,5 +817,11 @@ div.bars{
     div.input > form >button{
         width: auto;
     }
-    
+    div.web, div.optimization, div.development, div.cars, div.media{
+        width: 50px;
+        height: 50px;
+    }
+    .greeting-text{
+        text-align: center;
+    }
 }
